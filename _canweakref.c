@@ -23,7 +23,7 @@ static PyMethodDef SpamMethods[] = {
 
 static struct PyModuleDef spammodule = {
    PyModuleDef_HEAD_INIT,
-   "spam",   /* name of module */
+   "_weakrefable",   /* name of module */
    NULL, /* module documentation, may be NULL */
    -1,       /* size of per-interpreter state of the module,
                 or -1 if the module keeps state in global variables. */
@@ -32,7 +32,7 @@ static struct PyModuleDef spammodule = {
 
 
 PyMODINIT_FUNC
-PyInit_spam(void)
+PyInit__weakrefable(void)
 {
     return PyModule_Create(&spammodule);
 }
